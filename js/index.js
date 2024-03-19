@@ -1,23 +1,26 @@
 function sendWhatsapp() {
   if (verifyOptions()) {
-    var phonenumber = "+5522997170950";
-    var name = document.getElementById("name").value;
-    var lastname = document.getElementById("lastname").value;
-    var contact = parseInt(document.getElementById("contact").value);
-    var brand = document.getElementById("brand").value;
-    var model = document.getElementById("model").value;
-    var year = parseInt(document.getElementById("year").value);
-    var typeFuel = document.getElementById("typeFuel").value;
-    var fuelValue = parseFloat(document.querySelector("#fuelValue").value);
-    var standardGold = document.querySelector("#standard-gold").value;
-    var date = document.querySelector('input[type="date"]').value;
-    var hour = document.getElementById("selectHour").value;
-    var flag = document.getElementById("flag").value;
+    const phonenumber = "+5522997170950";
+    const name = document.getElementById("name").value;
+    const lastname = document.getElementById("lastname").value;
+    const contact = parseInt(document.getElementById("contact").value);
+    const brand = document.getElementById("brand").value;
+    const model = document.getElementById("model").value;
+    const year = parseInt(document.getElementById("year").value);
+    const typeFuel = document.getElementById("typeFuel").value;
+    const fuelValue = parseFloat(document.querySelector("#fuelValue").value);
+    const standardGold = document.querySelector("#standard-gold").value;
+    const date = document.querySelector('input[type="date"]').value;
+    const hour = document.getElementById("selectHour").value;
+    const flag = document.getElementById("flag").value;
 
-    var dateParts = date.split("-");
-    var invertedDate = dateParts.reverse().join("-");
+    const dateParts = date.split("-");
+    const invertedDate = dateParts.reverse().join("-");
 
-    var url =
+    
+
+    
+    const url =
       "https://wa.me/" +
       phonenumber +
       "?text=" +
@@ -63,33 +66,33 @@ function sendWhatsapp() {
 }
 
 function verifyOptions() {
-  var name = document.getElementById("name").value;
-  var lastname = document.getElementById("lastname").value;
-  var contact = document.getElementById("contact").value;
-  var brand = document.getElementById("brand").value;
-  var model = document.getElementById("model").value;
-  var year = document.getElementById("year").value;
-  var typeFuel = document.getElementById("typeFuel").value;
-  var fuelValue = document.getElementById("fuelValue").value;
-  var standardGold = document.getElementById("standard-gold").value;
-  var date = document.querySelector('input[type="date"]').value;
-  var hour = document.getElementById("selectHour").value;
-  var flag = document.getElementById("flag").value;
+  const name = document.getElementById("name").value;
+  const lastname = document.getElementById("lastname").value;
+  const contact = document.getElementById("contact").value;
+  const brand = document.getElementById("brand").value;
+  const model = document.getElementById("model").value;
+  const year = document.getElementById("year").value;
+  const typeFuel = document.getElementById("typeFuel").value;
+  const fuelValue = document.getElementById("fuelValue").value;
+  const standardGold = document.getElementById("standard-gold").value;
+  const date = document.querySelector('input[type="date"]').value;
+  const hour = document.getElementById("selectHour").value;
+  const flag = document.getElementById("flag").value;
 
   // Verifica se algum campo está vazio
   if (
-    name === "" ||
-    lastname === "" ||
-    contact === "" ||
-    brand === "" ||
-    model === "" ||
-    year === "" ||
-    typeFuel === "" ||
-    fuelValue === "" ||
-    standardGold === "" ||
-    date === "" ||
-    hour === "" ||
-    flag === ""
+    name == "" ||
+    lastname == "" ||
+    contact == "" ||
+    brand == "" ||
+    model == "" ||
+    year == "" ||
+    typeFuel == "" ||
+    fuelValue == "" ||
+    standardGold == "" ||
+    date == "" ||
+    hour == "" ||
+    flag == ""
   ) {
     alert("Por favor, preencha todos os campos corretamente!");
     return false;
@@ -97,4 +100,3 @@ function verifyOptions() {
 
   return true;
 }
-
